@@ -37,7 +37,9 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    // products that are open for bidding
     cart: [],
+    // previous selled products
     history: []
 
 }, { timestamps: true })
