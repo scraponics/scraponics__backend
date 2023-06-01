@@ -1,6 +1,13 @@
 import mongoose from "mongoose";
 
 const ScrapSchema = mongoose.Schema({
+    // current owner of the scrap
+    ownerId: {
+        type: String,
+        required: true
+    },
+
+    // scrap details
     name: {
         type: String,
         required: true
@@ -29,12 +36,12 @@ const ScrapSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    // current owner of the scrap
-    owner: {
+    status: {
         type: String,
         required: true
     },
-    // Previous owners of the scrap
+
+    // Previous owners of the scrap (for tracking purpose)
     history: []
 }, { timestamps: true })
 

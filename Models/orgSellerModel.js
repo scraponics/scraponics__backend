@@ -1,6 +1,9 @@
+// Organisation seller
+
 import mongoose from "mongoose";
 
-const VendorSchema = mongoose.Schema({
+const OrganisationSellerSchema = mongoose.Schema({
+    // organisation details
     name: {
         type: String,
         required: true
@@ -12,7 +15,7 @@ const VendorSchema = mongoose.Schema({
     },
     password: {
         type: String,
-        required: true, 
+        required: true
     },
     address: {
         landmark: {
@@ -44,10 +47,10 @@ const VendorSchema = mongoose.Schema({
         required: true
     },
     // products that are open for bidding
-    offers: [],
+    cart: [],
     // previous selled products
     history: []
-})
+}, { timestamps: true })
 
-const VendorModel = mongoose.model("Vendors", VendorSchema);
-export default VendorModel;
+const OrganisationModel = mongoose.model("Organisations", OrganisationSellerSchema);
+export default OrganisationModel;

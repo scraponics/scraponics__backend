@@ -1,6 +1,8 @@
+// Individual Seller Model
+
 import mongoose from "mongoose";
 
-const UserSchema = mongoose.Schema({
+const IndividualSellerSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -43,8 +45,7 @@ const UserSchema = mongoose.Schema({
     cart: [],
     // previous selled products
     history: []
-
 }, { timestamps: true })
 
-const UserModel = mongoose.model("Users", UserSchema);
-export default UserModel;
+const IndividualModel = mongoose.model("Individual", IndividualSellerSchema);
+export default IndividualModel;
