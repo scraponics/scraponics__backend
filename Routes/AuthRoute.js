@@ -1,17 +1,8 @@
-// import express from 'express';
+import express from 'express';
+import { registerOrg } from '../Controllers/AuthController.js';
 
-// const router = express.Router();
+const router = express.Router();
 
-// router.get('/', async(req, res) => {
-//     res.send("Hellow Laditya");
-// })
+router.post('/registerOrg', registerOrg)
 
-// export default router
-
-// import express from 'express';
-// import { registerUser } from '../Controllers/AuthController.js';
-
-// const router = express.Router();
-
-// router.post('/register', registerUser);
-// export default router;
+export default router;

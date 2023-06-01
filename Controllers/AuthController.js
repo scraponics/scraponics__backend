@@ -1,15 +1,15 @@
-// import UserModel from "../Models/userModel.js";
+import OrganisationModel from "../Models/orgSellerModel.js";
 
-// // Register a new User
-// export const registerUser = async (req, res) => {
-//     const { name, email, password, address, phoneNumber } = req.body;
+// Register an organisation
+export const registerOrg = async (req, res) => {
+    const { name, email, password, address, phoneNumber, gstNumber } = req.body;
 
-//     const newUser = new UserModel({ name, email, password, address, phoneNumber })
+    const newOrg = new OrganisationModel({ name, email, password, address, phoneNumber, gstNumber });
 
-//     try {
-//         await newUser.save()
-//         res.status(200).json(newUser)
-//     } catch (error) {
-//         res.status(500).json({ message: error.message })
-//     }
-// }
+    try {
+        await newOrg.save()
+        res.status(200).json(newOrg)
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+}
