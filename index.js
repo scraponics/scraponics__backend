@@ -29,5 +29,4 @@ mongoose.connect(process.env.MONGO_DB, {
 )
 
 // Usage of Routes
-// app.use('/auth', AuthRoute)
 app.use('/auth', AuthRoute);
