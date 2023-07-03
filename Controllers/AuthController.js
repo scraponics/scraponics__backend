@@ -2,9 +2,9 @@ import IndividualModel from "../Models/indSellerModel.js";
 
 // Register as an Individual User
 export const registerinduser = async (req, res) => {
-    const { name, email, password, address, profilePicture, phoneNumber } = req.body;
+    const { name, email, password, landmark, district, state, postalCode, profilePicture, phoneNumber } = req.body;
 
-    const newinduser = new IndividualModel({ name, email, password, address, profilePicture, phoneNumber });
+    const newinduser = new IndividualModel({ name, email, password, landmark, district, state, postalCode, profilePicture, phoneNumber });
 
     try {
         await newinduser.save();
