@@ -6,7 +6,7 @@ import cors from 'cors';
 
 
 import AuthRoute from './Routes/AuthRoute.js';
-
+import RateRoute from './Routes/RateRoute.js';
 
 
 const app = express();
@@ -32,3 +32,4 @@ mongoose.connect(process.env.MONGO_DB, {
 
 // Usage of Routes
 app.use('/auth', AuthRoute);
+app.use('/rate', RateRoute);
