@@ -17,10 +17,8 @@ export const postScrapData = async (req, res) => {
 
 
 export const getScrapData = async (req, res) => {
-    const { category } = req.body;;
-
     try {
-        const rateData = await RateModel.find({ category: category });
+        const rateData = await RateModel.find();
 
         res.status(200).json(rateData);
         

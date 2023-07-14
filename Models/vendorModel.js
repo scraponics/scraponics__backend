@@ -12,25 +12,23 @@ const VendorSchema = mongoose.Schema({
     },
     password: {
         type: String,
-        required: true, 
+        required: true
     },
-    address: {
-        landmark: {
-            type: String,
-            required: true
-        },
-        city: {
-            type: String,
-            required: true
-        },
-        state: {
-            type: String,
-            required: true
-        },
-        postalCode: {
-            type: String,
-            required: true
-        }
+    landmark: {
+        type: String,
+        required: true
+    },
+    district: {
+        type: String,
+        required: true
+    },
+    state: {
+        type: String,
+        required: true
+    },
+    postalCode: {
+        type: String,
+        required: true
     },
     profilePicture: {
         type: String,
@@ -44,7 +42,7 @@ const VendorSchema = mongoose.Schema({
         required: true
     },
     // products that are open for bidding
-    offers: [],
+    cart: [],
     // previous selled products
     history: []
 })

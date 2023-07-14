@@ -17,23 +17,21 @@ const OrganisationSellerSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    address: {
-        landmark: {
-            type: String,
-            required: true
-        },
-        city: {
-            type: String,
-            required: true
-        },
-        state: {
-            type: String,
-            required: true
-        },
-        postalCode: {
-            type: String,
-            required: true
-        }
+    landmark: {
+        type: String,
+        required: true
+    },
+    district: {
+        type: String,
+        required: true
+    },
+    state: {
+        type: String,
+        required: true
+    },
+    postalCode: {
+        type: String,
+        required: true
     },
     profilePicture: {
         type: String,
